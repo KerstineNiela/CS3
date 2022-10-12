@@ -1,0 +1,61 @@
+*{
+        box-sizing: border box;
+}        
+body { 
+        margin: 0;
+        background-color: gray;
+        background-image: url ("images/bg.jfif);
+        background-repeat: no repeat;
+        background-sizez: 100%;
+}        
+.logo {
+        float:left;
+        margin-right: 10px;
+        margin-left: 10px:
+}
+span {
+        font-size: 25px;
+        color: white;
+}
+#header
+        background-color: blue;
+        padding: 10px;
+}
+#nav un li a {
+        text-decoration:none; 
+}
+#nav un {
+        list-style-type:none;
+}
+#nav un li {
+        float: left;
+        padding: 10px;
+}
+#nav {
+        display:flex;
+        justify-content: center;
+        background-color: black;
+}
+#content text{
+         float: left;
+         width: 70%;
+}
+#content-nav{
+        float:right;
+        width: 30%;
+}
+#footer{
+        clear:both;
+}
+#footer p{
+        text-align:center;
+}
+hi {
+        text-align: center;
+}
+#content-text p {
+        padding: 5px;
+        text-indent:
+}
+
+        
