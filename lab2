@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title> My Favorite Anime </title>
+  </head>
+  <body>
+    <p>
+        <img src="My Favorite Anime.jpg" height=100px width=100px>
+        <h1> This is my favorite anime. It has an amazing plot and incredible soundtracks. I reccomend watching it. </h1>
+    </p>
+  </body>
+</html>
