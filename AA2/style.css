@@ -1,0 +1,25 @@
+div{
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid black;
+}
+h1{
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px; 
+}
+.section{
+	width: 33.33%; width: calc(100%/3);
+	float: left;
+}
+.article{
+	position: relative;
+	
+}
+.chicken{
+	
+}
+p{
+	margin: 35px 5px 5px 5px;
+	
+}
