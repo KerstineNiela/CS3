@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Img </title>
+   </head>
+  <body>
+   <img src="My Favorite Anime.jpg" height=500px width=500px>
+  </body>
+</html>
