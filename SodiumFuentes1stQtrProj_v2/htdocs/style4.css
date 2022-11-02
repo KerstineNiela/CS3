@@ -1,0 +1,53 @@
+body{
+	background: url("https://webstatic.hoyoverse.com/upload/uploadstatic/contentweb/20210721/2021072114421762898.png") repeat;
+	background-size: 100%;
+	background-color: black;
+}
+div{
+	text-align: center;
+	
+}
+.CE{
+	background-color: rgba(16,18,61,0.950);
+	margin: 50px 50px 1px 50px ;
+	padding: 10px;
+	font-style: italic;
+}
+h2{
+	text-align: center;
+	color: white;
+}
+#img{
+	margin: 10px 250px;
+	display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 25%;
+	height: 200px;
+}
+h1{
+	color: white;
+	margin: 30px;
+	font-size: 40px;
+	border: 3px solid #53D0D8;
+	padding: 10px;
+}
+.copyright{
+	border: 1px solid black;
+	background-color: black;
+	width: 100%;
+	height 350px;
+}
+img{
+	width: 200px;
+	height: 125px;
+}
+.H{
+	border: 1px solid #708090;
+	background-color: #708090;
+	color: white;
+	margin: 50px 100px;
+}
+p{
+	font-size: 25px;
+}
