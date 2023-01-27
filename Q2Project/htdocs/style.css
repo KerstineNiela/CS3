@@ -75,8 +75,6 @@ body{
 		}
 		li a:link{
 			color:black;
-			
-			
 			text-decoration: none;
 		}
 		li a:hover{
@@ -86,10 +84,12 @@ body{
 			padding: 5px;
 		}
 		li a: visited{
-			color: white;
+			color: black;
+			border: 5px solid #D9ACF5
 		}
 		li: active{
-			
+			border: 5px solid AF0171;
+			color: white;
 		}
 		img{
 			width:100px;
