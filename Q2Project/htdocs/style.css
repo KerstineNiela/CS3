@@ -6,7 +6,7 @@ body{
 		}
 		header{
 			border: 1px solid white;
-			color: black;
+			color: #D9ACF5;
 			text-align: center;
 			padding: 0px;
 			width: 100%;
@@ -15,6 +15,7 @@ body{
 			font-size: 25px;
 			border-radius: 15px 50px;
 			position: fixed;
+			transform: skewX(-20deg);
 		}
 		article{
 			float: right;
@@ -69,7 +70,7 @@ body{
 			padding: 10px;
 			margin: 20px;
 			text-decoration: none;
-			border: 1px solid blue;
+			border: 1px solid white;
 			border-radius: 15px 50px;
 			font-weight: bold;
 		}
@@ -83,15 +84,22 @@ body{
 			border-radius: 15px 30px;
 			padding: 5px;
 		}
-		li a: visited{
-			color: black;
-			border: 5px solid #D9ACF5
+		li a:visited{
+			color:#852999;
+			border: 5px solid #852999;
 		}
-		li: active{
-			border: 5px solid AF0171;
-			color: white;
+		li a:active{
+			border: 5px solid white;
+			color: #AAE3E2;
 		}
 		img{
-			width:100px;
+			width: 100px;
 			height: 75px;
+		}
+		p{
+			font-size: 20px;
+			margin: 40px;
+			border: 2px solid white;
+			padding: 10px;
+			color: white;
 		}
