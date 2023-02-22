@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> First page </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body onload="P2()">
+		<script>
+			function P2() {
+				var y= confirm("Go to the next page?");
+				
+				if(y==true){
+					window.open("second.html");
+			}else{
+				document.write("Okay, noted");
+			}
+		}
+		</script>	
+	</body>
+</html>
