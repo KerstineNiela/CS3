@@ -121,10 +121,38 @@
 				document.getElementById("computerChoice").src = "Images/2.png";
 			}
 	}
-			function checkWinner (){
-				
-	}
-		
+			function checkWinner(){
+
+                        if (random != player){
+                        if (random == 0){
+                                if (player == 1){
+                                           pscore += 1;
+
+                        }
+                                if (player == 2){
+                                           cscore += 1;
+                        }
+        }
+                        if (random == 1){
+                                if (player == 0){
+                                           cscore += 1;
+		        }
+                                if (player == 2){
+                                           pscore += 1;
+                        }
+        }
+                        if (random == 2){
+                                if (player == 0){
+                                           pscore += 1;
+                        }
+                                if (player == 1){
+                                           cscore += 1;
+                        }
+         }
+}
+          document.getElementById("pScore").innerHTML = pscore;
+          document.getElementById("cScore").innerHTML = cscore;
+}		
 			
 		</script>
 	</body>
