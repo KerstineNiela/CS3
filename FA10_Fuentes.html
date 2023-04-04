@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="author" content="Kerstine Niela C. Fuentes">
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="with=device-width, initial-scale=1.0">
+		<link rel="icon" href="icon.png" type="image/gif">
+		<title>Formative Assessment 10</title>
+	</head>
+	
+	<body onload="random()">
+	
+		<center>
+			<div>
+				<p id = "input"></p>
+				<p id = "expand"></p>
+			</div>
+		</center>
+		
+		<script>
+		var x;
+		var y;
+		
+			function random(){
+				x = Math.floor(Math.random()*1001);
+				y = String(x).expand('');
+				document.getElementById("input").innerHTML = "Randomly generated number: " + x;
+				document.getElementById("expand").innerHTML = "breakdown:  " + y.slice(-3, -2)*100 + ",  " + y.slice(-2, -1)*10 + ",  " + y.slice(-1);
+				
+			}
+		
+		</script>
+		
+	</body>
+</html>
