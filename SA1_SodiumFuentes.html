@@ -2,7 +2,10 @@
 <html>
 	<head>
 		<title>Toss coin</title>
-		<!-- provide the necessary meta tags -->
+		<meta name="author" content="Kerstine Niela C. Fuentes">
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="with=device-width, initial-scale=1.0">
+		<link rel="icon" href="icon.png" type="image/gif">
         <style>
         	body {background: navy; 
             	text-align: center;
@@ -39,7 +42,25 @@
                     guess.innerHTML = uGuess;
             }
 
-			function 
+			function shift(){
+				var coin = (Math.random()*2).toFixed(0) // changes the coin randomly 
+				
+				if (coin == 0){ 
+					document.getElementById("coin").innerHTML = "H"; //displays H
+					if(uGuess == "H"){
+						alert("Your guess is correct!"); //if your guess is correct
+					} else {
+						alert("Your guess is not correct :("); //if your guess is incorrect
+					}
+				} else{
+					document.getElementById("coin").innerHTML = "T"; //displays T
+					if(uGuess == "H"){
+						alert("Your guess is not correct :("); //if your guess is incorrect
+					} else {
+						alert("Your guess is correct!"); //if your guess is correct
+					}
+				}
+			} 
         </script>
 	</body>
 </html>
