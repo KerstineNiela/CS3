@@ -2,7 +2,10 @@
 <html>
 <head>
 	<title> My Online Shop</title>
-    <!-- type in the necessary meta tags -->
+        <meta name="author" content="Kerstine Niela C. Fuentes">
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="with=device-width, initial-scale=1.0">
+		<link rel="icon" href="icon.png" type="image/gif">
 	<style>
       span {color: blue; text-decoration:underline}
       button {width: 100px; padding: 5px; background: pink;}
@@ -10,24 +13,89 @@
 
 	</head>
 <body>
-	<h1> Welcome to My Online Shop </h1>
+	<h1> Welcome to the Numbers Cafe </h1>
 	<h2> Please select from the following items </h2>
-	<!--- provide your own 3 items and their prices in the list --->
+	
 	<ol>
-		<li> Item#1 price: 100.00 </li>
-		<li> Item#2 price: 250.00 </li>
-		<li> Item#3 price: 300.00 </li>
+		<li>  naybil liyana price: 250.00 </li>
+		<li> patriksya : 200.00 </li>
+		<li> kristy : 800.00 </li>
 	</ol>
-	<!-- the following will be used to display purchase information -->
-    <p> Item selected : <span id="item"> </span> </p>
+	<p> Item selected : <span id="item"> </span> </p>
 	<p> Qty bought : <span id="qty"> </span> </p>
 	<p> Amount to pay for the item: <span id="bill"> </span> </p>
 	<p> Current Total Bill <span id="tbill"> </span> </p>
-	<button> Buy an Item </button>
-	<button> Clear </button>
+	<button onclick="Buy()"> Buy an Item </button>
+	<button onclick="clear()"> Clear </button>
     
     <script>
-    	/* do not forget to include comments in your answer */
+    	var last = 0;
+	var total = 0;
+		
+		function Buy() {
+			var item  = prompt("Hi! Please choose your order");  //asks user what item from the menu the user wants to buy
+			
+			
+			if (item < 1 || item > 3 || isNaN(item)){
+				return alert("Your order is not on the menu");
+			}
+
+			var number = prompt("How many of this item " + item + " would you like ?"); //asks for the number of the order
+			
+			
+			if (isNaN(number)){
+				return alert("Error! Please enter a proper number"); 
+			}
+			
+					if(item == 1) { //if you order the first item
+
+						last += 250*number; //multiplies number with price
+						total = 250*number; //diplays the total charge of the user
+				
+						document.getElementById("item").innerHTML = "1";
+						document.getElementById("qty").innerHTML = number;
+						document.getElementById("bill").innerHTML = total;
+						document.getElementById("tbill").innerHTML = last;
+						
+					}
+				
+				
+					if(item == 2 { //if you order the second item
+				
+						last += 200*number;
+						total= 200*number;
+					
+						document.getElementById("item").innerHTML = "2";
+						document.getElementById("qty").innerHTML = number;				
+						document.getElementById("bill").innerHTML = total;
+						document.getElementById("tbill").innerHTML = last;
+				
+					}
+			
+			
+					if(item == 3) { //if you order the third item
+				
+						last += 800*number;
+						total = 800*number;
+				
+						document.getElementById("item").innerHTML = "2";
+						document.getElementById("qty").innerHTML = number;				
+						document.getElementById("bill").innerHTML = total;
+						document.getElementById("tbill").innerHTML = last;
+				
+					}
+			
+		
+				}
+				function clear(){ // clears all the data
+					last = 0;
+					document.getElementById("item").innerHTML = "";
+					document.getElementById("qty").innerHTML = "";				
+					document.getElementById("bill").innerHTML = "";
+					document.getElementById("tbill").innerHTML = "";
+		
+	
+			}
     
     </script>
 </body>
