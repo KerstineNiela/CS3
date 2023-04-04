@@ -2,7 +2,10 @@
 <html>
 	<head>
 		<title>Choose Background Color</title>
-		<!-- provide the necessary meta tags -->
+		<meta name="author" content="Kerstine Niela C. Fuentes">
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="with=device-width, initial-scale=1.0">
+		<link rel="icon" href="icon.png" type="image/gif">
         <style>
         	* { box-sizing: border-box; 
             	font-family: arial; 
@@ -35,18 +38,17 @@
 	<body>
 		<h2> Choose Background Color </h2>
         <ul>
-        	<li><a href="#"> Purple </a></li>
-            <li><a href="#"> Navy </a></li>
-            <li><a href="#"> Maroon </a></li>
+            <li><a href="#" " onclick="change('purple');" > Purple </a></li>
+            <li><a href="#" " onclick="change('navy');" > Navy </a></li>
+            <li><a href="#" " onclick="change('maroon');" > Maroon </a></li>
         </ul>
 		
 
         <script>
             /* do not forget to include comments to this script */
-           function change (color){
+           function change (){
                  document.body.style.backgroundColor = color;
 	   }
-
         </script>
 	</body>
 </html>
