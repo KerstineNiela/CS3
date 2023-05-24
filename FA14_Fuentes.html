@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+			<title> Alternative Assessment 1 </title>
+				<meta name="author" content="Fuentes, Kerstine Niela"> 
+				<meta charset="UTF-8"> 
+				<meta name="keywords" content="HTML, CSS, JavaScript"> 
+				<link rel="icon" href="icon.png" type="image/gif"> 
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<style>
+		h1{
+			font-style: italic;
+			text-align: center;
+			font-size: 50px;
+			color: #B7B7B7;
+		}
+		body{
+			background-color: #7C96AB;
+			color: #4C4B16;
+		}
+		#login{
+			float: left;
+			width: 46%;
+			padding: 20px;
+			background-color:#BFCCB5;
+			border: 3px solid #BFCCB5;
+			border-radius: 30px;
+		}
+		#data{
+			position: relative;
+			float: right;
+			width: 46%;
+			padding:20px; 
+			background-color: #BFCCB5;
+			border: 3px solid #BFCCB5;
+			border-radius: 30px;
+		}
+	</style>
+	<body>
+		<header>
+			<h1 id="web">Registration Form</h1>
+		</header>
+		
+		<form id="login">
+			<fieldset form="login">
+				<legend>Sign Up: </legend>
+			
+				<label for="nameInput">Name:</label><br>
+				<input type="text" id="nameInput" name="nameInput" onblur="red('nameInput')" onfocus="green('nameInput')"></br>
+				<label for="userName">Username:</label><br>
+				<input type="text" id="userName" name="username" onblur="red('userName')" onfocus="green('userName')"><br/>
+				<label for="password">Password:</label><br>
+				<input type="password" id="pass" name="password" onblur="red('pass')" onfocus="green('pass')"><br/>
+				<label for="address">Address:</label><br>
+				<input type="text" id="address" name="address" onblur="red('address')" onfocus="green('address')"><br/>
+				<label for="email">Email:</label><br>
+				<input type="email" id="email" name="email" onblur="red('email')" onfocus="green('email')"><br/>
+				<label for="gender">Gender</label><br>
+				<select name="gender" id="gd" onblur="red('gd')" onfocus="green('gd')"><br>
+					<option value="Female">Female</option>
+					<option value="Male">Male</option>
+					<option value="N/A">Prefer not to mention</option>
+				</select><br/>
+				<label for="interest">Interest:</label><br>
+				<textarea id="interest" name="interest" rows="5" cols="50" onblur="red('interest')" onfocus="green('interest')"> </textarea><br/>
+				<input type="reset" value="Reset" onclick="resetS()"><br><br/>
+				<form onsubmit="return data();">
+					<input type="submit" id="submit">
+				</form>
+			</fieldset>
+		</form>
+		
+					
+		<form id="data">
+			<fieldset form="data">
+				<legend> Data Summary: </legend>
+					<div id="userdata">
+						<p id="Name">Name: </p>
+						<p id="User">Unsername: </p>
+						<p id="Pass">Password: </p>
+						<p id="Address">Address: </p>
+						<p id="Email">Email: </p>
+						<p id="Gender">Gender: </p>
+						<p id="Interest">Interest: </p>
+					</div>
+				</fieldset>
+		</form>
+	
+		<script>
+			function red(id){
+				var x = document.getElementById(id).value;
+				if (x == ""){
+					document.getElementById(id).style.border = "2px solid red";
+				 } else {
+					document.getElementById(id).style.border = "2px solid green";
+				}
+			}
+			function data(){
+				var i = document.getElementById("nameInput").value;
+				document.getElementById("Name").innerHTML = "Name: " + i;
+				var j = document.getElementById("userName").value;
+				document.getElementById("User").innerHTML = "Username: " + j;
+				var k = document.getElementById("pass").value;
+				document.getElementById("Pass").innerHTML = "Password: " + k;
+				var e = document.getElementById("email").value;
+				document.getElementById("Email").innerHTML = "Email: " + e;
+				var l = document.getElementById("address").value;
+				document.getElementById("Address").innerHTML = "Address: " + l;
+				var n = document.getElementById("gd").value;
+				document.getElementById("Gender").innerHTML = "Gender: " +  n;
+				var m = document.getElementById("interest").value;
+				document.getElementById("Interest").innerHTML = "Interest: " +  m;
+				return false;
+			}
+			function green(id){
+				document.getElementById(id).style.border = "5px solid green";
+			}
+			function resetS() {
+				document.getElementById("nameInput").style.border = "";
+				document.getElementById("userName").style.border = "";
+				document.getElementById("pass").style.border = "";
+				document.getElementById("email").style.border = "";
+				document.getElementById("address").style.border = "";
+				document.getElementById("gd").style.border = "";
+				document.getElementById("interest").style.border = "";
+				document.getElementById("Name").innerHTML = "";
+				document.getElementById("User").innerHTML = "";
+				document.getElementById("Pass").innerHTML = "";
+				document.getElementById("Email").innerHTML = "";
+				document.getElementById("Address").innerHTML = "";
+				document.getElementById("Gender").innerHTML = "";
+				document.getElementById("Interest").innerHTML = "";
+			}
+		</script>
+		
+	</body>
+	
+</html>
+	
