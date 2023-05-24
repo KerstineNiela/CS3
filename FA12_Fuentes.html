@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Formative Assessment 12 </title>
+			<meta charset="UTF-8"> 
+			<meta name="author" content="Fuentes, Kerstine Niela"> 
+			<meta name="keywords" content="HTML, CSS, JavaScript"> 
+			<link rel="icon" href="icon.png" type="image/gif">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+			table, td {
+				border: 1px solid black;
+				margin-top: 30px;
+			}
+		</style>
+	</head>
+		<body>
+				<p>[Select and enter a number between 2 and 10]</p>
+				<input type="text" id="number1"/> by
+				<input type="text" id="number2"/>
+				<br></br>
+				<button onclick="table()">Click here!</button>
+				<br></br>
+				<div id ="table"></div>
+			
+			<script>
+				const input = document.createElement("input");
+				input.setAttribute("type");
+				input.setAttribute("text");
+				document.body.appendChild(input);
+				
+				function table() {
+					var i =  document.getElementById("number1").value;
+					if (i < 2 || i > 10 || isNaN(i)){
+						return alert("Please enter numbers between 2 and 10");
+					}
+					var j = document.getElementById("number2").value;
+					if (j < 2 || j > 10 || isNaN(j)){
+						return alert("Please enter numbers between 2 and 10");
+					}	
+						var table = "<table border='1px'>";
+							for (var a = 1; a <= i; a++) {
+								table += ("<tr style='height:40px'>");
+									for (var b = 1; b <= j; b++) {
+										table += ("<td style='width:40px'><center><font size='4'>" + a * b + "</center></font></td>");
+									}
+								table += ("</tr>");
+							}
+								
+						table += ("</table>");
+						
+						document.getElementById("table").innerHTML = table;
+						}
+				
+			</script>
+				
+		</body>
+
+</html>
