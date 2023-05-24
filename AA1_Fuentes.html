@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+			<title> Alternative Assessment 1 </title>
+				<meta name="author" content="Fuentes, Kerstine Niela"> 
+				<meta charset="UTF-8"> 
+				<meta name="keywords" content="HTML, CSS, JavaScript"> 
+				<link rel="icon" href="icon.png" type="image/gif"> 
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	
+	<body>
+			<script>
+			
+				var sequence = prompt(" Enter the mRna sequence.");
+				var Codon = sequence.indexOf("AUG");
+				var mRna = [];
+				
+				
+				if (Codon == -1){
+					document.write("Unable to find the start codon. Try again.");
+				}
+				
+				var startSignal = sequence.slice(Codon);
+				for(j=0; j < sequence.length; j+=3) {
+					var codonBases = startSignal.slice(j, j+3)
+					mRna.push(codonBases);
+					
+						if(codonBases == "UAA" || codonBases == "UAG" || codonBases == "UGA"){
+						mRna.push(codonBases);
+						break;
+					}
+				}
+				
+				mRna = mRna.slice(0, -1);
+				document.write("[ "  ,mRna,  " ]");
+				for(x = 0; x < mRna.length; x++){
+
+					let Amino = mRna[x];
+					var Acid;
+					
+					switch(Amino){
+						case "UUU":
+						case "UUC":
+							Acid = "Phe";
+							break;
+						
+						case "UCU":
+						case "UCC":
+						case "UCA":
+						case "UCG":
+							Acid = "Ser";
+							break;
+						
+						case "UAU":
+						case "UAC":
+							Acid = "Tyr";
+							break;
+						
+						case "UGU":
+						case "UGC":
+						Acid = "Cys";
+							break;
+						
+						case "UGC":
+							Acid = "Trp";
+							break;
+							
+						case "CGU":
+						case "CGC":
+						case "CGA":
+						case "CGG":
+						case "AGA":
+						case "AGG":
+							Acid = "Arg";
+							break;
+						
+						case "CAU":
+						case "CAC":
+							Acid = "His";
+							break;
+							
+						case "GAA":
+						case "GAG":
+							Acid = "Glu";
+							break;
+						
+						case "CCU":
+						case "CCC":
+						case "CCA":
+						case "CCG":
+							Acid = "Pro";
+							break;
+						
+						case "UUA":
+						case "UUG":
+						case "CUU":
+						case "CUC":
+						case "CUA":
+						case "CUG":
+							Acid = "Leu";
+							break;
+						
+						case "AUU":
+						case "AUC":
+						case "AUA":
+							Acid = "Ile";
+							break;
+							
+						case "ACU":
+						case "ACC":
+						case "ACA":
+						case "ACG":
+							Acid = "Thr";
+							break;
+						
+						case "AAU":
+						case "AAC":
+							Acid = "Asn";
+							break;
+							
+						case "AAA":
+						case "AAG":
+							Acid = "Lys";
+							break;
+							
+						case "AGU":
+						case "AGC":
+							Acid = "Ser";
+							break;
+						
+						case "GGU":
+						case "GGC":
+						case "GGA":
+						case "GGG":
+							Acid = "Gly";
+							break;
+							
+						case "GAU":
+						case "GAC":
+							Acid = "Asp";
+							break;
+						
+						case "CAA":
+						case "CAG":
+							Acid = "Gln";
+							break;
+							
+						case "GCU":
+						case "GCC":
+						case "GCA":
+						case "GCG":
+							Acid = "Ala";
+							break;
+							
+						case "GUU":
+						case "GUC":
+						case "GUA":
+						case "GUG":
+							Acid = "Val";
+							break;
+						
+						case "UAA":
+						case "UAG":
+						case "UGA":
+							Acid = "STOP";
+							break;
+						
+						case "AUG":
+							Acid = "Met";
+							break;
+
+						default:
+							Acid = "Unknown";
+							break;
+					}
+				
+				document.write("<br/>" + Amino + " --> " + Acid);
+				if(Acid == "STOP"){
+					break;
+					}
+				}
+
+			</script>
+	</body>
+</html>
